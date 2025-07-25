@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Graph Visualization and Algorithms</title>
+<link rel="stylesheet" href="graph.css">
+</head>
+<body>
+
+<header>
+  <h1>Graph Visualization and Graph Algorithms</h1>
+</header>
+
+<div id="controls">
+  <div id="graph-type-block">
+    <label for="graphType">Graph Type:</label>
+    <select id="graphType">
+      <option value="undirected">Undirected</option>
+      <option value="directed">Directed</option>
+    </select>
+  </div>
+
+  <div id="number-of-vertices-block">
+    <label for="numVertices">Number of Vertices:</label>
+    <input type="number" id="numVertices" value="10"/>
+  </div>
+
+  <div id="edges-block">
+    <label for="edgesInput">Edges (e.g., "1-2(4),1-3(2),2-4(5)"): </label>
+    <input type="text" id="edgesInput" value="1-2(4),1-3(2),2-4(5),2-5(3),3-4(1),3-6(7),4-5(2),4-7(6),5-8(4),6-7(3),6-9(5),7-10(2),8-9(1),9-10(4)"/>
+  </div>
+
+  <div id="algorithm-block">
+    <label for="graph-algorithm">Algorithm:</label>
+    <select id="graph-algorithm">
+      <option value="BFS">Breadth-First Search (BFS)</option>
+      <option value="DFS">Depth-First Search (DFS)</option>
+      <option value="Dijkstra">Dijkstra's Algorithm (Shortest Path)</option>
+      <option value="Prim">Prim's Algorithm (MST)</option>
+      <option value="Kruskal">Kruskal's Algorithm (MST)</option>
+    </select>
+  </div>
+
+  <div id="algo-inputs">
+    <div class="start-goal-inputs" id="bfs-dfs-dijkstra-inputs" style="display:block;">
+      <div id="start-input-group">
+        <label for="startVertexInput">Start Vertex:</label>
+        <input type="text" id="startVertexInput" value="1" />
+      </div>
+      <div id="goal-input-group">
+        <label for="goalVertexInput">Goal Vertex (optional for DFS/Dijkstra):</label>
+        <input type="text" id="goalVertexInput" value="4" />
+      </div>
+    </div>
+
+    <div class="start-only-inputs" id="prim-inputs" style="display:none;">
+      <label for="primStartInput">Start Vertex (optional):</label>
+      <input type="text" id="primStartInput" value="1" />
+    </div>
+  </div>
+
+  <div id="visualize-graph-block">
+    <button id="visualizeBtn">Visualize Graph</button>
+  </div>
+
+  <div id="start-algorithm-block">
+    <button id="startGraphBtn">Start Algorithm</button>
+  </div>
+</div>
+
+<div id="visualizer"></div>
+<div id="explanationText"></div>
+<div id="code-section">
+  <h2>Algorithm Code</h2>
+  <pre id="algorithm-code"></pre>
+</div>
+
+
+<script src="graph.js"></script>
+</body>
+</html>

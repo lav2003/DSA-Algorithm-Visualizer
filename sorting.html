@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorting Algorithms Visualization</title>
+  <link rel="stylesheet" href="sorting.css">
+</head>
+<body>
+  <header>
+    <h1>Sorting Algorithms Visualization</h1>
+  </header>
+  <main>
+    <section class="controls">
+      <input type="text" id="numberInput" placeholder="Enter numbers separated by commas">
+      <select id="algorithmSelect">
+        <option value="bubbleSort">Bubble Sort</option>
+        <option value="selectionSort">Selection Sort</option>
+        <option value="insertionSort">Insertion Sort</option>
+        <option value="mergeSort">Merge Sort</option>
+        <option value="quickSort">Quick Sort</option>
+        <option value="heapSort">Heap Sort</option>
+      </select>
+      <button id="startButton">Start</button>
+      <button id="pauseButton">Pause</button>
+      <button id="resetButton">Reset</button>
+      <input type="range" id="speedControl" min="1" max="100" value="50">
+    </section>
+    <section class="visualization" id="visualizationArea">
+      <!-- Visualization happens here -->
+    </section>
+    <!-- Algorithm Code Section -->
+    <section class="code-visualization">
+      <h2>Algorithm Code</h2>
+      <pre id="codeDisplay">
+        <!-- Algorithm code will be displayed dynamically here -->
+      </pre>
+    </section>
+  </main>
+  <script src="sorting.js"></script>
+</body>
+</html>
+

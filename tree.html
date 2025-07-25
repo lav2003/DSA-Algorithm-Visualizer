@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BST Visualization and Algorithms</title>
+  <link rel="stylesheet" href="tree.css">
+</head>
+<body>
+
+<header>
+  <h1>TREE ALGORITHM VISUALIZER</h1>
+</header>
+
+<div id="controls">
+  <div>
+    <label for="algorithmSelect">Algorithm:</label>
+    <select id="algorithmSelect">
+      <!-- Traversals -->
+      <optgroup label="Traversals">
+        <option value="Preorder">Preorder Traversal</option>
+        <option value="Inorder">Inorder Traversal</option>
+        <option value="Postorder">Postorder Traversal</option>
+      </optgroup>
+
+      <!-- Search & Modification -->
+      <optgroup label="BST Operations">
+        <option value="BSTSearch">BST Search</option>
+        <option value="BSTInsert">BST Insertion</option>
+        <option value="BSTDelete">BST Deletion</option>
+      </optgroup>
+
+      <!-- Construction -->
+      <optgroup label="Tree Construction">
+        <option value="FromPreIn">From Preorder & Inorder</option>
+        <option value="FromPostIn">From Postorder & Inorder</option>
+      </optgroup>
+    </select>
+  </div>
+
+  <div id="input-blocks">
+    <div id="nodes-block">
+      <label for="nodesInput">Nodes (comma-separated):</label>
+      <input type="text" id="nodesInput" value="50,30,20,40,70,60,80"/>
+    </div>
+
+    <div id="search-block" style="display:none;">
+      <label for="searchInput">Search Key:</label>
+      <input type="number" id="searchInput"/>
+    </div>
+
+    <div id="insert-block" style="display:none;">
+      <label for="insertInput">Insert Key:</label>
+      <input type="number" id="insertInput"/>
+    </div>
+
+    <div id="delete-block" style="display:none;">
+      <label for="deleteInput">Delete Key:</label>
+      <input type="number" id="deleteInput"/>
+    </div>
+
+    <div id="construct-pre-in-block" style="display:none;">
+      <label for="preInput">Preorder (comma-separated):</label>
+      <input type="text" id="preInput" value="50,30,20,40,70,60,80" />
+      <label for="inInput">Inorder (comma-separated):</label>
+      <input type="text" id="inInput" value="20,30,40,50,60,70,80"/>
+    </div>
+
+    <div id="construct-post-in-block" style="display:none;">
+      <label for="postInput">Postorder (comma-separated):</label>
+      <input type="text" id="postInput" value="20,40,30,60,80,70,50" />
+      <label for="inInput2">Inorder (comma-separated):</label>
+      <input type="text" id="inInput2" value="20,30,40,50,60,70,80"/>
+    </div>
+  </div>
+
+  <div>
+    <button id="visualizeBtn">Visualize Tree</button>
+    <button id="runAlgoBtn">Run Algorithm</button>
+  </div>
+</div>
+
+
+
+<div id="visualizer"></div>
+<div id="explanationText"></div>
+<div id="code-section">
+  <h2>Algorithm Code</h2>
+  <pre id="algorithm-code"></pre>
+</div>
+
+<script src="tree.js"></script>
+</body>
+</html>
